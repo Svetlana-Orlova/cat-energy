@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Светлана Орлова](https://up.htmlacademy.ru/adaptive/20/user/1463321).
-* Наставник: `Неизвестно`.
+* Наставник: [Беллавин Дмитрий](https://github.com/bellavindm).
 
 ---
 
