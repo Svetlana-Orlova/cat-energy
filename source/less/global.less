@@ -1,0 +1,35 @@
+body {
+  font-family: Oswald, Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: normal;
+  color: @black;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  min-width: 320px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: @black;
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
