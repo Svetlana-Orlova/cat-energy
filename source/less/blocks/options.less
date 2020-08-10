@@ -10,6 +10,13 @@
   margin: 0;
   padding-left: 0;
   min-height: 266px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    }
 }
 
 .options__item {
