@@ -12,7 +12,7 @@
   <header class="page-header">
     <a href="#" class="page-header__logo logo">
       <img class="page-header__logo-img" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип Кэт энерджи">
-  </a>
+    </a>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
@@ -41,46 +41,48 @@
       <p class="page-title__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
     </section>
     <form class="form" action="https://echo.htmlacademy.ru">
-      <fieldset class="form__fieldset">
-        <ul class="form__list">
-          <li class="form__item">
-            <label class="form__label-text label-text" for="form-name">Имя:*</label>
-            <input class="form__input-text input-text" id="form-name" name="form-name" type="text" placeholder="Барсик" required>
-          </li>
-          <li class="form__item">
-            <label class="form__label-text label-text" for="form-weight">Вес (кг):*</label>
-            <input class="form__input-text input-text" id="form-weight" name="form-weight" type="number" placeholder="7" required>
-          </li>
-          <li class="form__item">
-            <label class="form__label-text label-text" for="form-age">Возраст (лет):</label>
-            <input class="form__input-text input-text" id="form-age" name="form-age" type="number" placeholder="7">
-          </li>
-        </ul>
-      </fieldset>
-      <fieldset class="form__fieldset">
-        <ul class="form__list">
-          <li class="form__item">
-            <input class="form__input-radio input-radio" type="radio" id="form-slimming" name="form-slimming" checked>
-            <label class="form__label-radio label-radio" for="form-slimming">Похудение</label>
-          </li>
-          <li class="form__item">
-            <input class="form__input-radio input-radio" id="form-weighting" name="form-weighting" type="radio">
-            <label class="form__label-radio label-radio" for="form-weighting">Набор массы</label>
-          </li>
-          <li class="form__item">
-            <input class="form__input-radio input-radio" type="radio" id="form-unknown" name="form-unknown">
-            <label class="form__label-radio label-radio" for="form-unknown">Не знаю (Нужен ваш совет)</label>
-          </li>
-        </ul>
-      </fieldset>
+      <div class="form__fieldset-wrapper1">
+        <fieldset class="form__fieldset">
+          <ul class="form__list">
+            <li class="form__item">
+              <label class="form__label-text label-text" for="form-name">Имя:*</label>
+              <input class="form__input-text input-text" id="form-name" name="form-name" type="text" placeholder="Барсик" required>
+            </li>
+            <li class="form__item">
+              <label class="form__label-text label-text" for="form-weight">Вес (кг):*</label>
+              <input class="form__input-text input-text" id="form-weight" name="form-weight" type="number" placeholder="7" required>
+            </li>
+            <li class="form__item">
+              <label class="form__label-text label-text" for="form-age">Возраст (лет):</label>
+              <input class="form__input-text input-text" id="form-age" name="form-age" type="number" placeholder="7">
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="form__fieldset form__fieldset-aim">
+          <ul class="form__list">
+            <li class="form__item">
+              <input class="form__input-radio input-radio" type="radio" id="form-slimming" name="form-slimming" checked>
+              <label class="form__label-radio label-radio" for="form-slimming">Похудение</label>
+            </li>
+            <li class="form__item">
+              <input class="form__input-radio input-radio" id="form-weighting" name="form-weighting" type="radio">
+              <label class="form__label-radio label-radio" for="form-weighting">Набор массы</label>
+            </li>
+            <li class="form__item">
+              <input class="form__input-radio input-radio" type="radio" id="form-unknown" name="form-unknown">
+              <label class="form__label-radio label-radio" for="form-unknown">Не знаю (Нужен ваш совет)</label>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
       <fieldset class="form__fieldset">
         <legend class="form__legend">Контактные данные (владельца кота)</legend>
-        <ul class="form__list">
-          <li class="form__item">
+        <ul class="form__list form__list-contacts">
+          <li class="form__item form__item-contacts">
             <label class="form__label-text label-text" for="form-email">E-mail:*</label>
             <input class="form__input-text input-text input-text--email" id="form-email" name="form-email" type="email" placeholder="kuklachev@gmail.com" required>
           </li>
-          <li class="form__item">
+          <li class="form__item form__item-contacts">
             <label class="form__label-text label-text" for="form-tel">Телефон:*</label>
             <input class="form__input-text input-text input-text--tel" id="form-tel" name="form-tel" type="tel" placeholder="8 (960) 900-60-90" required>
           </li>
@@ -91,29 +93,31 @@
         <textarea class="form__input-text input-text input-text--textarea" name="form-comment" rows="5" placeholder="Расскажите обо всех повадках кота">
         </textarea>
       </fieldset>
-      <fieldset class="form__fieldset">
-        <legend class="form__legend">Дополнительно</legend>
-        <ul class="form__list">
-          <li class="form__item">
-            <input class="form__input-check input-check" type="checkbox" id="form-sweetener" name="form-sweetener" checked>
-            <label class="form__label-check label-check" for="form-sweetener">Cахарозаменитель</label>
-          </li>
-          <li class="form__item">
-            <input class="form__input-check input-check" type="checkbox" id="form-water" name="form-water">
-            <label class="form__label-check label-check" for="form-water">Питьевая вода</label>
-          </li>
-          <li class="form__item">
-            <input class="form__input-check input-check" type="checkbox" id="form-milk" name="form-milk">
-            <label class="form__label-check label-check" for="form-milk">Молоко</label>
-          </li>
-          <li class="form__item">
-            <input class="form__input-check input-check" type="checkbox" id="form-vitamins" name="form-vitamins">
-            <label class="form__label-check label-check" for="form-vitamins">Витамины</label>
-          </li>
-        </ul>
-      </fieldset>
-      <button class="form__button button" type="submit">Oтправить заявку</button>
-      <div class="form__advice">* — Обязательные поля</div>
+      <div class="form__fieldset-wrapper2">
+        <fieldset class="form__fieldset form__fieldset-more">
+          <legend class="form__legend">Дополнительно</legend>
+          <ul class="form__list form__list-more">
+            <li class="form__item form__item-more">
+              <input class="form__input-check input-check" type="checkbox" id="form-sweetener" name="form-sweetener" checked>
+              <label class="form__label-check label-check" for="form-sweetener">Cахарозаменитель</label>
+            </li>
+            <li class="form__item form__item-more">
+              <input class="form__input-check input-check" type="checkbox" id="form-water" name="form-water">
+              <label class="form__label-check label-check" for="form-water">Питьевая вода</label>
+            </li>
+            <li class="form__item form__item-more">
+              <input class="form__input-check input-check" type="checkbox" id="form-milk" name="form-milk">
+              <label class="form__label-check label-check" for="form-milk">Молоко</label>
+            </li>
+            <li class="form__item form__item-more">
+              <input class="form__input-check input-check" type="checkbox" id="form-vitamins" name="form-vitamins">
+              <label class="form__label-check label-check" for="form-vitamins">Витамины</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="form__button button" type="submit">Oтправить заявку</button>
+        <div class="form__advice">* — Обязательные поля</div>
+      </div>
     </form>
   </main>
   <footer class="page-footer page-footer--form">
