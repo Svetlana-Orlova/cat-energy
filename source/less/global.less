@@ -1,5 +1,5 @@
 @tablet-width: 768px;
-@desktop-width: 1240px;
+@desktop-width: 1440px;
 @mobile-width-only: 767px;
 
 body {
@@ -35,4 +35,29 @@ img {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.container {
+  max-width: @mobile-width-only;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+  max-width: @desktop-width;
+  padding-left: 30px;
+  padding-right: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+  max-width: 2000px;
+  padding-left: 110px;
+  padding-right: 110px;
+  }
+}
+
+.container--out {
+  margin: 0;
+  width: 100%;
 }
