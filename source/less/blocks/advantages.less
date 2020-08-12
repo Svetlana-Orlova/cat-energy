@@ -11,11 +11,9 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    gap: 153px;
   }
 
   @media (min-width: @desktop-width) {
-    gap: 77px;
   }
 }
 
@@ -35,7 +33,7 @@
 .advantages__item {
   margin-top: 50px;
   position: relative;
-  width: 256px;
+  flex-basis: 25%;
 
   &--benefit::before {
     position: absolute;
@@ -78,7 +76,11 @@
   }
 
   @media (min-width: @tablet-width) {
-    width: 250px;
+    flex-basis: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-basis: 25%;
   }
 }
 
