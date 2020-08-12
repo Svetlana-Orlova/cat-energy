@@ -5,13 +5,14 @@
   <meta charset="UTF-8">
   <title>Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body class="page__body">
-  <header class="page-header">
+  <header class="page-header container">
     <a href="#" class="page-header__logo logo">
-      <img class="page-header__logo-img" src="img/logo-mobile.svg" width="33" height="38" alt="Картинка логотипа Кэт энерджи">
-  </a>
+      <img class="page-header__logo-img" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип Кэт энерджи">
+    </a>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
@@ -35,9 +36,9 @@
     </nav>
   </header>
   <main class="page-main">
-    <h1 class="page-title page-title--catalog">Каталог продукции</h1>
+    <h1 class="page-title page-title--catalog container">Каталог продукции</h1>
     <section class="catalog">
-      <div class="catalog__wrapper">
+      <div class="catalog__wrapper container">
         <ul class="catalog__list">
           <li class="catalog__item">
             <a class="catalog__link catalog__link--product1" href="#">
@@ -186,14 +187,17 @@
             </table>
             <a href="#" class="catalog__order-button button">Заказать</a>
           </li>
-          <li class="catalog__item">
+          <li class="catalog__item catalog__item--more">
             <h2 class="catalog__title">Показать еще 100500 товаров</h2>
             <p class="catalog__title-description">На самом деле вкусов гораздо больше!</p>
             <a href="#" class="catalog__more-button button">Показать все</a>
           </li>
         </ul>
       </div>
+      </section>
       <div class="extra-catalog__wrapper">
+      <section class="extra-catalog">
+      <div class="extra-catalog__main container">
         <h2 class="extra-catalog__title">Дополнительные товары</h2>
         <ul class="extra-catalog__list">
           <li class="extra-catalog__item">
@@ -239,16 +243,17 @@
         </ul>
       </div>
     </section>
-    <section class="promotion__wrapper">
+    <section class="promotion__wrapper container">
       <h2 class="visually-hidden">Акция</h2>
       <img class="promotion__img" src="img/icon-gift.svg" width="78" height="80" alt="Подарок">
       <p class="promotion__description">Закажите все <br>и получите чехол для кота в подарок!</p>
     </section>
+    </div>
   </main>
   <footer class="page-footer page-footer--catalog">
-    <div class="page-footer__wrapper">
+    <div class="page-footer__wrapper container--out">
       <section class="page-footer__contacts">
-        <div class="page-footer__contacts-wrapper">
+        <div class="page-footer__contacts-wrapper container">
           <p class="page-footer__contacts-text">Приглашаем к сотрудничеству дилеров!</p>
           <p class="page-footer__contacts-adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
@@ -258,7 +263,7 @@
             width="320" height="362" allowfullscreen title="Офис компании по адресу Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></iframe>
         </div>
       </section>
-      <div class="page-footer__wrapper-social">
+      <div class="page-footer__wrapper-social container">
         <a class="page-footer__logo logo" href="#">
           <img src="img/logo-footer.svg" width="128" height="24" alt="Кэт энерджи">
         </a>

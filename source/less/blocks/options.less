@@ -5,17 +5,35 @@
   text-align: center;
 }
 
+.options__wrapper {
+  width: 1220px;
+}
+
 .options__list {
   list-style: none;
   margin: 0;
   padding-left: 0;
   min-height: 266px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 280px;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    flex-direction: row;
+  }
 }
 
 .options__item {
   background-color: @basic-grey;
   margin: 20px;
-  position:relative;
+  position: relative;
 
   &::before {
     position: absolute;
@@ -24,10 +42,10 @@
     border-radius: 50%;
     box-sizing: border-box;
     display: block;
-}
+  }
 
   &--slim::before {
-    content: url(../img/icon-cat-slim.svg);
+    content: url("../img/icon-cat-slim.svg");
     width: 36px;
     height: 50px;
     left: 25px;
@@ -35,7 +53,7 @@
   }
 
   &--pro::before {
-    content: url(../img/icon-cat-pro.svg);
+    content: url("../img/icon-cat-pro.svg");
     width: 67px;
     height: 50px;
     left: 25px;
@@ -53,21 +71,21 @@
 .options__description {
   font-size: 14px;
   line-height: 18px;
-  font-family: Arial;
+  font-family: "Arial";
   color: @grey4;
 }
 
 .options__button {
   font-size: 16px;
   line-height: 1;
-  font-family: Oswald, Arial;
+  font-family: "Oswald", "Arial";
   color: @black;
   background-color: @basic-grey;
   position: relative;
 
   &::after {
     position: absolute;
-    content: url(../img/icon-right-arrow-long.svg);
+    content: url("../img/icon-right-arrow-long.svg");
     width: 32px;
     height: 10px;
     top: 20px;
@@ -78,16 +96,18 @@
 
 .options__button:focus,
 .options__button:hover {
-    background-color: @basic-grey;
-    &:after {
-      content: url("../img/icon-right-arrow-verylong.svg");
-      }
+  background-color: @basic-grey;
+
+  &:after {
+    content: url("../img/icon-right-arrow-verylong.svg");
   }
+}
 
 .options__button:active {
-    color: fade(@black, 30%);
-    background-color: @basic-grey;
-    &:after {
-      opacity: 0.3;
-    }
+  color: fade(@black, 30%);
+  background-color: @basic-grey;
+
+  &:after {
+    opacity: 0.3;
   }
+}
