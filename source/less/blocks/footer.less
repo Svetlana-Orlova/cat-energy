@@ -1,7 +1,7 @@
 .page-footer {
   padding-top: 25px;
   text-align: center;
-  margin: 0 auto;
+  margin: 0;
 
   &--catalog,
   &--form {
@@ -17,7 +17,7 @@
 }
 
 .page-footer__contacts-adress {
-  font-family: "Arial";
+  font-family: "Arial", sans-serif;
   font-size: 14px;
   color: @grey4;
 }
@@ -25,9 +25,8 @@
 .page-footer__contacts-map {
   background-image: url("../img/bg-map-mobile@1x.png");
   background-repeat: no-repeat;
-  width: 320px;
-  height: 362px;
   position: relative;
+  border: none;
 
   &::after {
     position: absolute;
@@ -37,6 +36,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+}
+
+.page-footer__connect {
+  background-color: @basic-grey;
 }
 
 .page-footer__wrapper-social {
@@ -70,16 +73,16 @@
   padding-left: 10px;
 
   @media (min-width: @tablet-width) {
-    width: 128px;
+    min-width: 128px;
   }
 }
 
 .page-footer__copyright-link {
-  font-family: "Arial";
+  font-family: "Arial", sans-serif;
   font-size: 16px;
   color: @grey4;
 
   @media (min-width: @tablet-width) {
-    width: 163px;
+    min-width: 163px;
   }
 }

@@ -11,7 +11,7 @@
 <body class="page__body">
   <header class="page-header container">
     <a href="#" class="page-header__logo logo">
-      <img class="page-header__logo-img" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип Кэт энерджи">
+      <img class="page-header__logo-img" src="img/logo-mobile.svg" width="100%" height="38" alt="Логотип Кэт энерджи">
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">
@@ -36,9 +36,9 @@
     </nav>
   </header>
   <main class="page-main">
-    <section class="page-title container">
-      <div class="container--out">
-        <h1 class="page-title__title">Функциональное питание для котов</h1>
+    <section class="page-title">
+      <div class="page-title__wrapper container">
+        <h1 class="page-title__title">Функциональное <br>питание для котов</h1>
         <p class="page-title__description">Занялся собой? Займись котом!</p>
         <img class="page-title__img" src="img/index-can-mobile@1x.png" width="280" height="270" alt="Cat energy Pro с курицей">
         <a href="form.html" class="page-title__button button">Подобрать программу</a>
@@ -46,26 +46,23 @@
     </section>
     <section class="options container">
       <h2 class="visually-hidden">Направления</h2>
-      <div class="options__wrapper">
-        <ul class="options__list">
-          <li class="options__item options__item--slim">
-            <h3 class="options__subtitle">Похудение</h3>
-            <p class="options__description">Ваш кот весит больше собаки и утратил возможность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сброситьлишний вес.</p>
-            <a href="catalog.html" class="options__button button">Каталог Slim</a>
-          </li>
-          <li class="options__item options__item--pro">
-            <h3 class="options__subtitle">Набор массы</h3>
-            <p class="options__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <a href="catalog.html" class="options__button button">Каталог Pro</a>
-          </li>
-        </ul>
-      </div>
+      <ul class="options__list">
+        <li class="options__item options__item--slim">
+          <h3 class="options__subtitle">Похудение</h3>
+          <p class="options__description">Ваш кот весит больше собаки и утратил возможность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сброситьлишний вес.</p>
+          <a href="catalog.html" class="options__button button">Каталог Slim</a>
+        </li>
+        <li class="options__item options__item--pro">
+          <h3 class="options__subtitle">Набор массы</h3>
+          <p class="options__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+          <a href="catalog.html" class="options__button button">Каталог Pro</a>
+        </li>
+      </ul>
     </section>
-    <section class="advantages">
-      <h2 class="visually-hidden">Преимущества</h2>
-      <div class="advantages__wrapper container">
+    <section class="advantages container">
+      <h2 class="advantages__title">Как это работает</h2>
+      <div class="advantages__wrapper">
         <ul class="advantages__list">
-          <h3 class="advantages__title">Как это работает</h3>
           <li class="advantages__item advantages__item--benefit">
             <p class="advantages__description">Функциональное питание содержит только полезные питательные вещества.</p>
           </li>
@@ -96,7 +93,7 @@
           </li>
         </ul>
         <p class="example__price"> Затраты на питание: 15 000 руб.</p>
-      <!--Здесь будет слайдер с котом в двух ипостасях
+        <!--Здесь будет слайдер с котом в двух ипостасях
       <img class="example__fat-cat" src="img/after-mobile@1x.png" width="311" height="232" alt="Толстый кот">
       <img class="example__slim-cat" src="img/before-mobile@1x.png" width="311" height="232" alt="Похудевший кот">-->
         <div class="example__slider">
@@ -107,18 +104,18 @@
     </section>
   </main>
   <footer class="page-footer">
-    <div class="page-footer__wrapper">
-      <section class="page-footer__contacts">
-        <div class="page-footer__contacts-wrapper container">
-          <p class="page-footer__contacts-text">Приглашаем к сотрудничеству дилеров!</p>
-          <p class="page-footer__contacts-adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-        </div>
-        <div class="page-footer__contacts-map container--out">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002735!2d30.320858715590237!3d59.938719169054785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1591626314459!5m2!1sru!2sru"
-            width="320" height="362" allowfullscreen title="Офис компании по адресу Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></iframe>
-        </div>
-      </section>
+    <section class="page-footer__contacts">
+      <div class="page-footer__contacts-wrapper container">
+        <p class="page-footer__contacts-text">Приглашаем к сотрудничеству дилеров!</p>
+        <p class="page-footer__contacts-adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      </div>
+      <div class="page-footer__contacts-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002735!2d30.320858715590237!3d59.938719169054785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1591626314459!5m2!1sru!2sru"
+          width="100%" height="365" allowfullscreen title="Офис компании по адресу Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></iframe>
+      </div>
+    </section>
+    <section class="page-footer__connect">
       <div class="page-footer__wrapper-social container">
         <a class="page-footer__logo logo" href="#">
           <img src="img/logo-footer.svg" width="128" height="24" alt="Кэт энерджи">
@@ -150,7 +147,7 @@
           </a>
         </div>
       </div>
-    </div>
+    </section>
   </footer>
 </body>
 

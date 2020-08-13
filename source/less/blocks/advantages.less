@@ -1,5 +1,5 @@
 .advantages {
-  margin-top: 20px;
+  margin-top: 27px;
 }
 
 .advantages__list {
@@ -11,31 +11,25 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    gap: 153px;
+    padding: 0;
   }
 
   @media (min-width: @desktop-width) {
-    gap: 77px;
   }
 }
 
 .advantages__title {
   font-size: 36px;
-  width: 255px;
 
   @media (min-width: @tablet-width) {
-    width: 875px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 1375px;
+    font-size: 60px;
   }
 }
 
 .advantages__item {
-  margin-top: 50px;
+  margin-top: 20px;
   position: relative;
-  width: 256px;
+  flex-basis: 25%;
 
   &--benefit::before {
     position: absolute;
@@ -43,8 +37,12 @@
     background-color: @green;
     width: 60px;
     height: 60px;
-    top: -15px;
-    left: 0;
+    top: 10px;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   &--convenience::before {
@@ -53,8 +51,12 @@
     background-color: @green;
     width: 60px;
     height: 60px;
-    top: -15px;
-    left: 0;
+    top: 10px;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   &--mode::before {
@@ -63,8 +65,12 @@
     background-color: @green;
     width: 60px;
     height: 60px;
-    top: -15px;
-    left: 0;
+    top: 10px;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   &--result::before {
@@ -73,18 +79,33 @@
     background-color: @green;
     width: 60px;
     height: 60px;
-    top: -15px;
-    left: 0;
+    top: 10px;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   @media (min-width: @tablet-width) {
-    width: 250px;
+    flex-basis: 50%;
+    min-height: 280px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-basis: 25%;
   }
 }
 
 .advantages__description {
-  font-family: "Arial";
+  font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: @grey4;
+  padding-left: 80px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    padding: 113px 90px 57px 0;
+  }
 }

@@ -1,31 +1,16 @@
 .options {
   margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
-}
-
-.options__wrapper {
-  width: 1220px;
 }
 
 .options__list {
   list-style: none;
   margin: 0;
   padding-left: 0;
-  min-height: 266px;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 280px;
-
-  @media (min-width: @tablet-width) {
-    width: 708px;
-  }
 
   @media (min-width: @desktop-width) {
-    width: 570px;
     flex-direction: row;
   }
 }
@@ -34,6 +19,14 @@
   background-color: @basic-grey;
   margin: 20px;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 53px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-grow: 1;
+  }
 
   &::before {
     position: absolute;
@@ -48,16 +41,16 @@
     content: url("../img/icon-cat-slim.svg");
     width: 36px;
     height: 50px;
-    left: 25px;
-    top: 7px;
+    left: 30px;
+    top: 32px;
   }
 
   &--pro::before {
     content: url("../img/icon-cat-pro.svg");
     width: 67px;
     height: 50px;
-    left: 25px;
-    top: 15px;
+    left: 13px;
+    top: 40px;
   }
 }
 
@@ -66,22 +59,60 @@
   line-height: 1.5;
   text-transform: uppercase;
   padding-top: 20px;
+  padding-left: 85px;
+  text-align: left;
+
+  @media (min-width: @tablet-width) {
+    font-weight: normal;
+    font-size: 36px;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 40px 0 135px;
+  }
 }
 
 .options__description {
   font-size: 14px;
   line-height: 18px;
-  font-family: "Arial";
+  font-family: "Arial", sans-serif;
   color: @grey4;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-weight: normal;
+    font-size: 16px;
+    padding: 0 225px 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 52px;
+    padding-right: 52px;
+  }
 }
 
 .options__button {
   font-size: 16px;
   line-height: 1;
-  font-family: "Oswald", "Arial";
+  font-family: "Oswald", "Arial", sans-serif;
   color: @black;
   background-color: @basic-grey;
   position: relative;
+  text-align: left;
+  display: table;
+
+  @media (min-width: @tablet-width) {
+    font-weight: normal;
+    font-size: 20px;
+    padding-left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 52px;
+  }
 
   &::after {
     position: absolute;
@@ -89,7 +120,7 @@
     width: 32px;
     height: 10px;
     top: 20px;
-    left: 750px;
+    left: 100%;
     display: block;
   }
 }
@@ -98,7 +129,7 @@
 .options__button:hover {
   background-color: @basic-grey;
 
-  &:after {
+  &::after {
     content: url("../img/icon-right-arrow-verylong.svg");
   }
 }
@@ -107,7 +138,7 @@
   color: fade(@black, 30%);
   background-color: @basic-grey;
 
-  &:after {
+  &::after {
     opacity: 0.3;
   }
 }
