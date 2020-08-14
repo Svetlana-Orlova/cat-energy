@@ -3,31 +3,88 @@
   background-color: @grey6;
 }
 
+.example__container {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.example__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 500px;
+  }
+}
+
 .example__title {
   font-size: 36px;
+  font-weight: normal;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+  }
 }
 
 .example-description {
   font-family: "Arial", sans-serif;
+  font-weight: normal;
   font-size: 14px;
   line-height: 18px;
   color: @grey4;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+  }
 }
 
 .example__list {
   list-style: none;
-  margin: 0;
   padding-left: 0;
+  display: flex;
+  margin: 0 auto;
+  max-width: 366px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    margin: 0;
+    justify-content: space-between;
+  }
 }
 
 .example__item {
   margin-top: 25px;
+  padding-right: 32px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+}
+
+.example__item--time {
+  padding-right: 0;
 }
 
 .example__number {
   font-size: 24px;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
+  font-weight: normal;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .example__description {
@@ -35,6 +92,11 @@
   font-size: 12px;
   line-height: 1;
   color: @grey4;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+  }
 }
 
 .example__price {
@@ -43,10 +105,25 @@
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    max-width: 175px;
+    font-size: 20px;
+    text-align: right;
+    margin-top: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 330px;
+  }
 }
 
 .example__slider {
   text-align: center;
   text-transform: uppercase;
   font-size: 16px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+  }
 }
