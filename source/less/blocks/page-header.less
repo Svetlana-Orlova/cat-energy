@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
@@ -22,6 +23,7 @@
     margin: auto;
     background: transparent;
     width: 1220px;
+    z-index: 2;
   }
 }
 
@@ -45,10 +47,12 @@
 .main-nav__toggle {
   background-image: url("../img/icon-mobile-menu.svg");
   background-repeat: no-repeat;
+  position: absolute;
   width: 24px;
   height: 16px;
   border: none;
   background-color: transparent;
+  top: 70px;
 
   @media (min-width: @tablet-width) {
     display: none;
