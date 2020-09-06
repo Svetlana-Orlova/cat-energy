@@ -13,7 +13,7 @@
     <a href="#" class="page-header__logo logo">
       <img class="page-header__logo-img" src="img/logo-mobile.svg" width="100%" height="38" alt="Логотип Кэт энерджи">
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -109,7 +109,10 @@
     <section class="page-footer__contacts">
       <div class="page-footer__contacts-wrapper container">
         <p class="page-footer__contacts-text">Приглашаем к сотрудничеству дилеров!</p>
-        <p class="page-footer__contacts-adress">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></p>
+        <div class="page-footer__contacts-adress">
+          <p class="page-footer__contacts-adress--street">ул. Большая Конюшенная, д. 19/8</p>
+          <p class="page-footer__contacts-adress page-footer__contacts-adress--city">Санкт-Петербург</p>
+        </div>
       </div>
       <div class="page-footer__contacts-map">
         <iframe
@@ -151,6 +154,7 @@
       </div>
     </section>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
