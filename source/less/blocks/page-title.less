@@ -1,8 +1,13 @@
-.page-title {
+.page-main {
+  margin-top: 18px;
+}
+
+  .page-title {
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   text-align: center;
+  margin-top: 12px;
 
   @media (min-width: @tablet-width) {
     background-image: none;
@@ -58,6 +63,7 @@
   line-height: 1;
   padding-top: 27px;
   text-align: center;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
     font-weight: normal;
@@ -75,11 +81,13 @@
   font-size: 14px;
   margin-top: 25px;
   text-transform: uppercase;
+  text-align: center;
 
   @media (min-width: @tablet-width) {
     font-weight: normal;
     font-size: 20px;
     padding-left: 65px;
+    text-align: left;
   }
 }
 
@@ -87,10 +95,6 @@
   font-size: 14px;
   margin: 0 auto;
   margin-top: 3px;
-
-  @media (min-width: 510px) {
-    border: 2px solid @black;   // временное решение
-  }
 
   @media (min-width: @tablet-width) {
     display: table;

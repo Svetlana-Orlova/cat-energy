@@ -13,12 +13,12 @@
     <a href="#" class="page-header__logo logo">
       <img class="page-header__logo-img" src="img/logo-mobile.svg" width="100%" height="38" alt="Логотип Кэт энерджи">
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
+        <ul class="main-nav__list main-nav__list--form">
           <li class="main-nav__item">
             <a href="index.html" class="main-nav__link main-nav__link--form">Главная
             </a>
@@ -38,21 +38,21 @@
   <main class="page-main">
     <section class="page-title page-title--form container">
       <h1 class="page-title__title">Подбор программы</h1>
-      <p class="page-title__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <p class="page-title__description">Заполните анкету, и мы подберем <br>программу питания для вашего кота</p>
     </section>
     <form class="form" action="https://echo.htmlacademy.ru">
       <div class="form__fieldset-wrapper1 container">
         <fieldset class="form__fieldset">
           <ul class="form__list">
-            <li class="form__item">
+            <li class="form__item inscription">
               <label class="form__label-text label-text" for="form-name">Имя:*</label>
               <input class="form__input-text input-text" id="form-name" name="form-name" type="text" placeholder="Барсик" required>
             </li>
-            <li class="form__item">
+            <li class="form__item inscription">
               <label class="form__label-text label-text" for="form-weight">Вес (кг):*</label>
               <input class="form__input-text input-text" id="form-weight" name="form-weight" type="number" placeholder="7" required>
             </li>
-            <li class="form__item">
+            <li class="form__item inscription">
               <label class="form__label-text label-text" for="form-age">Возраст (лет):</label>
               <input class="form__input-text input-text" id="form-age" name="form-age" type="number" placeholder="7">
             </li>
@@ -78,19 +78,19 @@
       <fieldset class="form__fieldset container">
         <legend class="form__legend">Контактные данные (владельца кота)</legend>
         <ul class="form__list form__list-contacts">
-          <li class="form__item form__item-contacts">
+          <li class="form__item form__item-contacts inscription">
             <label class="form__label-text label-text" for="form-email">E-mail:*</label>
             <input class="form__input-text input-text input-text--email" id="form-email" name="form-email" type="email" placeholder="kuklachev@gmail.com" required>
           </li>
-          <li class="form__item form__item-contacts">
-            <label class="form__label-text label-text" for="form-tel">Телефон:*</label>
+          <li class="form__item form__item-contacts inscription">
+            <label class="form__label-text label-text label-text--tel" for="form-tel">Телефон:*</label>
             <input class="form__input-text input-text input-text--tel" id="form-tel" name="form-tel" type="tel" placeholder="8 (960) 900-60-90" required>
           </li>
         </ul>
       </fieldset>
-      <fieldset class="form__fieldset container">
+      <fieldset class="form__fieldset container inscription">
         <legend class="form__legend">Комментарий</legend>
-        <textarea class="form__input-text input-text input-text--textarea" name="form-comment" rows="5" placeholder="Расскажите обо всех повадках кота">
+        <textarea class="form__input-text input-text input-text--textarea container" name="form-comment" rows="5" placeholder="Расскажите обо всех повадках кота">
         </textarea>
       </fieldset>
       <fieldset class="form__fieldset form__fieldset-more container">
@@ -125,7 +125,10 @@
       <section class="page-footer__contacts">
         <div class="page-footer__contacts-wrapper container">
           <p class="page-footer__contacts-text">Приглашаем к сотрудничеству дилеров!</p>
-          <p class="page-footer__contacts-adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          <div class="page-footer__contacts-adress">
+            <p class="page-footer__contacts-adress--street">ул. Большая Конюшенная, д. 19/8</p>
+            <p class="page-footer__contacts-adress page-footer__contacts-adress--city">Санкт-Петербург</p>
+          </div>
         </div>
         <div class="page-footer__contacts-map">
           <iframe
@@ -166,6 +169,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

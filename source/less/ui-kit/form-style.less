@@ -10,8 +10,9 @@
 }
 
 .form__list-contacts {
-  display: flex;
-  flex-wrap: wrap;
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
 }
 
 .form__list-more {
@@ -58,8 +59,14 @@
 .form__item {
   margin-top: 14px;
   font-size: 16px;
+  line-height: 18px;
   color: @grey4;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .form__item-more {
@@ -74,18 +81,6 @@
   }
 }
 
-.form__item-contacts {
-  width: 290px;
-
-  @media (min-width: @tablet-width) {
-    width: 700px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 569px;
-  }
-}
-
 .form__advice {
   font-family: "Arial", sans-serif;
   font-size: 14px;
@@ -96,13 +91,42 @@
   }
 }
 
+.label-text--tel {
+  @media (min-width: @desktop-width) {
+    margin-left: 60px;
+  }
+}
+
 .input-text {
   text-transform: uppercase;
-  width: 80%;
+  flex-grow: 1;
+  margin-left: 20px;
+  border: 1px solid @grey7;
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    border-color: @grey2;
+  }
+
+  &:active {
+    border: 2px solid @grey4;
+  }
+}
+
+.input-text--textarea {
+  width: 100%;
+  margin-left: 0;
 }
 
 .form__button {
   @media (min-width: @desktop-width) {
     min-width: 568px;
   }
+}
+
+.inscription {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
 }
