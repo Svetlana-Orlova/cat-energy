@@ -11,19 +11,12 @@
   display: grid;
   gap: 8px;
   padding-bottom: 18px;
-  margin-top: 20px;
+  margin-top: 13px;
+  border-bottom: 1px solid @grey2;
 
   &:first-of-type {
     padding-top: 13px;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    height: 1px;
-    background-color: @grey2;
-    left: 0;
-    top: 0;
+    border-top: 1px solid @grey2;
   }
 
   @media (min-width: @tablet-width) {
@@ -162,7 +155,7 @@
   background-repeat: no-repeat;
   font-family: "Arial", sans-serif;
   font-size: 16px;
-  margin: 57px auto 0;
+  margin: 20px auto 0;
 
   @media (min-width: @tablet-width) {
     margin: 20px auto 0;
@@ -188,33 +181,38 @@
 }
 
 .promotion__img {
+  margin-left: 101px;
   margin-top: 58px;
   fill: @white;
-  width: 58px;
-  height: auto;
+  width: 78px;
+  height: 80px;
 
   @media (min-width: @tablet-width) {
-    margin-left: 20px;
+    margin-left: 78px;
     margin-top: 20px;
+    width: 80px;
+    height: 83px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 95px;
-    margin-top: 65px;
+    margin-left: 84px;
+    margin-top: 56px;
   }
 }
 
 .promotion__description {
-  margin-top: 48px;
+  margin: 48px auto 0;
   text-align: center;
   min-width: 160px;
   max-width: 165px;
 
   @media (min-width: @tablet-width) {
     margin-right: 80px;
+    text-align: left;
   }
 
   @media (min-width: @desktop-width) {
     margin: 55px auto 0;
+    text-align: center;
   }
 }
