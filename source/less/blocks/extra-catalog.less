@@ -150,12 +150,17 @@
 .promotion__wrapper {
   color: @white;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-size: contain;
   width: 280px;
   height: 289px;
   background-repeat: no-repeat;
   font-family: "Arial", sans-serif;
   font-size: 16px;
   margin: 20px auto 0;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+  }
 
   @media (min-width: @tablet-width) {
     margin: 20px auto 0;
@@ -165,6 +170,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -177,6 +186,10 @@
     grid-row-start: 1;
     grid-row-end: 3;
     margin-top: 135px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+    }
   }
 }
 
