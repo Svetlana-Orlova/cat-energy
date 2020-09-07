@@ -11,7 +11,6 @@
     flex-direction: row;
     justify-content: space-between;
     margin-top: 25px;
-    padding: 0;
     min-width: 710px;
   }
 
@@ -23,7 +22,6 @@
     right: 0;
     margin: auto;
     background: transparent;
-    width: 1220px;
     z-index: 2;
   }
 }
@@ -31,7 +29,9 @@
 .page-header__logo {
   width: 250px;
   height: 37px;
-  margin-right: 25px;
+  margin: 0 auto;
+  padding-right: 65px;
+  padding-bottom: 15px;
 
   @media (min-width: @tablet-width) {
     width: 174px;
@@ -41,7 +41,7 @@
   @media (min-width: @desktop-width) {
     width: 202px;
     height: 59px;
-    margin-right: 60px;
+    margin: 0;
   }
 }
 
@@ -62,8 +62,8 @@
   border: none;
   background-color: transparent;
   background-repeat: no-repeat;
-  top: 15px;
-  left: 310px;
+  top: 18px;
+  right: 20px;
   cursor: pointer;
   z-index: 3;
 
@@ -114,7 +114,9 @@
 .main-nav__list a {
   position: relative;
   display: block;
-  padding: 23px 20px;
+  padding-top: 23px;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-bottom: 13px;
   text-decoration: none;
 
@@ -170,6 +172,10 @@
   &--form {
     color: @black;
   }
+}
+
+.main-nav__item:last-of-type .main-nav__link {
+  padding-bottom: 7px;
 }
 
 .main-nav__item--active {

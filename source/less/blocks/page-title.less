@@ -1,13 +1,23 @@
 .page-main {
-  margin-top: 18px;
+  margin-top: 10px;
+  border-top: 1px solid @grey8;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
 }
 
-  .page-title {
+.page-title {
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   text-align: center;
-  margin-top: 12px;
+
+  @media (min-width: 465px) {
+    background-image: url("../img/index-background-mobile@1x.jpg"), linear-gradient(rgba(99, 167, 58, 1) 0%, rgba(99, 167, 58, 1) 86%, rgba(255, 255, 255, 1) 86%, rgba(255, 255, 255, 1) 100%);
+    background-size: 465px auto, 100%;
+    background-position: top center, center;
+  }
 
   @media (min-width: @tablet-width) {
     background-image: none;
