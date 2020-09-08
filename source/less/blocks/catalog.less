@@ -63,8 +63,8 @@
   @media (min-width: @tablet-width) {
     grid-column: 1/2;
     grid-row: 1/2;
-    width: 168px;
-    height: 200px;
+    width: 280px;
+    height: 100px;
     margin: 0 auto;
     position: relative;
   }
@@ -78,14 +78,16 @@
 .catalog__link img {
   @media (min-width: @tablet-width) {
     position: absolute;
-    width: 168px;
+    display: block;
     height: auto;
-    left: 50%;
-    right: 50%;
-    transform: translateX(-50%);
-    top: -25%;
+    bottom: 0;
     background: transparent;
   }
+}
+
+.catalog__link picture {
+  display: block;
+  height: 100%;
 }
 
 .catalog__product {
