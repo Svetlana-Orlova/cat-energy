@@ -12,6 +12,12 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     padding: 0;
+    max-width: 870px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1440px;
   }
 }
 
@@ -38,9 +44,22 @@
     height: 60px;
     top: 10px;
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/advantage-leaf@2x.png");
+    }
+
     @media (min-width: @tablet-width) {
       width: 80px;
       height: 80px;
+    }
+  }
+
+  &--benefit {
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/1.svg");
+      background-repeat: no-repeat;
+      background-size: 112px 240px;
+      background-position: 110px 10px;
     }
   }
 
@@ -54,9 +73,22 @@
     height: 60px;
     top: 10px;
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/advantage-powder@2x.png");
+    }
+
     @media (min-width: @tablet-width) {
       width: 80px;
       height: 80px;
+    }
+  }
+
+  &--convenience {
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/2.svg");
+      background-repeat: no-repeat;
+      background-size: 120px 240px;
+      background-position: 120px 5px;
     }
   }
 
@@ -70,9 +102,22 @@
     height: 60px;
     top: 10px;
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/advantage-dining@2x.png");
+    }
+
     @media (min-width: @tablet-width) {
       width: 80px;
       height: 80px;
+    }
+  }
+
+  &--mode {
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/3.svg");
+      background-repeat: no-repeat;
+      background-size: 120px 240px;
+      background-position: 119px 5px;
     }
   }
 
@@ -86,9 +131,22 @@
     height: 60px;
     top: 10px;
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/advantage-clock@2x.png");
+    }
+
     @media (min-width: @tablet-width) {
       width: 80px;
       height: 80px;
+    }
+  }
+
+  &--result {
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/4.svg");
+      background-repeat: no-repeat;
+      background-size: 120px 240px;
+      background-position: 119px 5px;
     }
   }
 
@@ -112,7 +170,7 @@
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
-    padding: 113px 90px 57px 0;
+    padding: 113px 20px 0 0;
     max-width: 245px;
   }
 }
