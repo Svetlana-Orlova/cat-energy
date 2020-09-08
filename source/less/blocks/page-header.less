@@ -27,15 +27,16 @@
 }
 
 .page-header__logo {
-  width: 250px;
   height: 37px;
   margin: 0 auto;
   padding-right: 65px;
   padding-bottom: 15px;
+  display: block;
 
   @media (min-width: @tablet-width) {
     width: 174px;
     height: 52px;
+    margin-left: 50px;
   }
 
   @media (min-width: @desktop-width) {
@@ -45,7 +46,15 @@
   }
 }
 
+.page-header__logo picture {
+  display: block;
+  height: 100%
+}
+
 .page-header__logo-img {
+  display: block;
+  height: 100%;
+
   &:hover,
   &:focus {
     opacity: 0.8;
