@@ -118,11 +118,28 @@ const server = (done) => {
 
 exports.server = server;
 
+// HTML
+
+const html = () => {
+  return gulp
+  .src("source/*.html")
+  .pipe(gulp.dest("build/"));
+};
+exports.html = html;
+
+// refresh
+
+const refresh = (done) => {
+  sync.reload();
+  done();
+};
+exports.refresh = refresh;
+
 // Watcher
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles));
-  gulp.watch("source/*.html", gulp.series(build)).on("change", sync.reload);
+  gulp.watch("source/*.html", gulp.series(html, refresh));
 };
 
 exports.default = gulp.series(build, server, watcher);

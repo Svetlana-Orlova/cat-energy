@@ -45,6 +45,9 @@
         <h1 class="page-title__title">Функциональное <br>питание для котов</h1>
         <p class="page-title__description">Занялся собой? Займись котом!</p>
         <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.webp 1x, img/index-can-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet@1x.webp 1x, img/index-can-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/index-can-mobile@1x.webp 1x, img/index-can-mobile@2x.webp 2x">
           <source media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
           <img class="page-title__img" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="270" alt="Cat energy Pro с курицей">
@@ -92,31 +95,38 @@
           <h2 class="example__title">Живой пример</h2>
           <p class="example-description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
           <ul class="example__list">
-            <li class="example__item">
+            <li class="example__item example__item--weight">
               <p class="example__number">5 кг</p>
-              <p class="example__description">снижение веса</p>
             </li>
             <li class="example__item example__item--time">
               <p class="example__number">60 дней</p>
-              <p class="example__description">затрачено времени</p>
             </li>
           </ul>
           <p class="example__price"> Затраты на питание: <span>15 000 руб.</span></p>
         </div>
         <div class="example__slider">
           <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
             <source media="(min-width: 1440px)" srcset="img/before-desktop.png 1x, img/before-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/before-tablet.png 1x, img/before-tablet@2x.png 2x">
-            <img class="example__fat-cat" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="311" height="232" alt="Толстый кот">
+            <img class="example__fat-cat" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="100%" alt="Толстый кот">
           </picture>
           <!--Здесь будет слайдер с котом в двух ипостасях
           <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/aftertablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
             <source media="(min-width: 1440px)" srcset="img/after-desktop.png 1x, img/after-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/after-tablet.png 1x, img/after-tablet@2x.png 2x">
             <img class="example__slim-cat" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="311" height="232" alt="Похудевший кот">
           </picture>
           -->
           <p class="example__before">Было</p>
+          <div class="example__slider--line">
+            <div class="example__slider--scale"></div>
+          </div>
           <p class="example__after">Стало</p>
         </div>
       </div>

@@ -3,6 +3,7 @@
   background-color: @grey6;
 
   @media (min-width: @tablet-width) {
+    padding-bottom: 70px;
     border-top: 1px solid @grey8;
     background: linear-gradient(@white 0%, @white 50%, @grey6 50%, @grey6 100%);
   }
@@ -52,6 +53,7 @@
   font-size: 14px;
   line-height: 18px;
   color: @grey4;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
@@ -63,50 +65,95 @@
   list-style: none;
   padding-left: 0;
   display: flex;
-  margin: 0 auto;
-  max-width: 366px;
+  margin: 25px auto 0;
+  height: min-content;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
     margin: 0;
     justify-content: space-between;
+    margin-top: 54px;
   }
 }
 
 .example__item {
-  margin-top: 25px;
-  padding-right: 32px;
-
-  @media (min-width: @tablet-width) {
-    margin: 0;
-  }
-}
-
-.example__item--time {
-  padding-right: 0;
-}
-
-.example__number {
-  font-size: 24px;
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  font-weight: normal;
-  text-align: center;
+  border: 1px solid @grey2;
+  box-sizing: border-box;
+  border-radius: 3px;
+  position: relative;
+  line-height: 1;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
   }
 }
 
-.example__description {
+.example__item--time {
+  padding: 14px 21px 18px;
+
+  @media (min-width: @tablet-width) {
+    padding: 15px 30px 20px;
+  }
+}
+
+.example__item--weight {
+  padding: 14px 40px 18px;
+  margin-right: 32px;
+
+  @media (min-width: @tablet-width) {
+    padding: 15px 57px 20px;
+  }
+}
+
+.example__item::after {
+  position: absolute;
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 1;
   color: @grey4;
+  top: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: @grey6;
   text-align: center;
+  padding: 0 10px;
 
   @media (min-width: @tablet-width) {
     font-size: 14px;
+    background-color: @white;
+    top: 56px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @grey6;
+  }
+}
+
+.example__item--weight::after {
+  content: "снижение веса";
+
+  @media (min-width: @tablet-width) {
+    width: 97px;
+    padding: 0 8px;
+  }
+}
+
+.example__item--time::after {
+  content: "затрачено времени";
+
+  @media (min-width: @tablet-width) {
+    width: 127px;
+    padding: 0 7px;
+  }
+}
+
+.example__number {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
   }
 }
 
@@ -116,16 +163,18 @@
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
+  margin-top: 35px;
 
   @media (min-width: @tablet-width) {
     max-width: 175px;
     font-size: 20px;
     text-align: right;
-    margin-top: 50px;
+    margin-top: 30px;
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 330px;
+    max-width: 1330px;
+    line-height: 1;
   }
 }
 
@@ -134,6 +183,7 @@
   text-transform: uppercase;
   font-size: 16px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 
   @media (min-width: @tablet-width) {
@@ -141,12 +191,18 @@
   }
 }
 
+.example__slider picture {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
 
 .example__before {
-  margin-right: 40px;
+  margin-right: 12px;
 
   @media (min-width: @tablet-width) {
     border-bottom: 1px dotted @grey2;
+    margin-right: 24px;
   }
 
   @media (min-width: @desktop-width) {
@@ -155,11 +211,60 @@
 }
 
 .example__after {
+  margin-left: 13px;
+
   @media (min-width: @tablet-width) {
     border-bottom: 1px dotted @grey2;
+    margin-left: 20px;
   }
 
   @media (min-width: @desktop-width) {
     align-self: flex-end;
+  }
+}
+
+.example__slider--line {
+  width: 84px;
+  height: 14px;
+  dysplay: block;
+  border: 1px solid @grey2;
+  box-sizing: border-box;
+  border-radius: 6px;
+  background-color: @white;
+  margin-top: 21px;
+
+  @media (min-width: @tablet-width) {
+    width: 428px;
+    height: 6px;
+    border: none;
+    background-color: @grey10;
+    margin-top: 33px;
+    position: relative;
+  }
+}
+
+.example__slider--scale {
+  width: 35px;
+  height: 6px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  background-color: @green;
+  margin-top: 3px;
+  margin-left: 6px;
+  display: block;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0;
+    border: 12px solid @white;
+    background-color: @green;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.15);
   }
 }
