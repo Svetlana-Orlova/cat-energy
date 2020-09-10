@@ -45,8 +45,8 @@
       <p class="page-title__description">Заполните анкету, и мы подберем <br>программу питания для вашего кота</p>
     </section>
     <form class="form" action="https://echo.htmlacademy.ru">
-      <div class="form__fieldset-wrapper1 container">
-        <fieldset class="form__fieldset">
+      <div class="form-wrapper1 container">
+        <fieldset class="form__fieldset form__fieldset-inscription">
           <ul class="form__list">
             <li class="form__item inscription">
               <label class="form__label-text label-text" for="form-name">Имя:*</label>
@@ -63,16 +63,16 @@
           </ul>
         </fieldset>
         <fieldset class="form__fieldset form__fieldset-aim">
-          <ul class="form__list">
-            <li class="form__item">
+          <ul class="form__list form__list-aim">
+            <li class="form__item form__item-aim">
               <input class="form__input-radio input-radio visually-hidden" type="radio" id="form-slimming" name="form-radio" checked>
               <label class="form__label-radio label-radio" for="form-slimming">Похудение</label>
             </li>
-            <li class="form__item">
+            <li class="form__item form__item-aim">
               <input class="form__input-radio input-radio visually-hidden" id="form-weighting" name="form-radio" type="radio">
               <label class="form__label-radio label-radio" for="form-weighting">Набор массы</label>
             </li>
-            <li class="form__item">
+            <li class="form__item form__item-aim">
               <input class="form__input-radio input-radio visually-hidden" type="radio" id="form-unknown" name="form-radio">
               <label class="form__label-radio label-radio" for="form-unknown">Не знаю (Нужен ваш совет)</label>
             </li>
@@ -82,13 +82,19 @@
       <fieldset class="form__fieldset container">
         <legend class="form__legend">Контактные данные (владельца кота)</legend>
         <ul class="form__list form__list-contacts">
-          <li class="form__item form__item-contacts inscription">
+          <li class="form__item form__item-contacts form__item--mail inscription">
             <label class="form__label-text label-text" for="form-email">E-mail:*</label>
-            <input class="form__input-text input-text input-text--email" id="form-email" name="form-email" type="email" placeholder="kuklachev@gmail.com" required>
+            <input class="form__input-text input-text input-text--contacts" id="form-email" name="form-email" type="email" placeholder="kuklachev@gmail.com" required>
+            <svg class="icon-mail" width="20" height="14">
+              <use xlink:href="../img/sprite.svg#icon-mail"></use>
+            </svg>
           </li>
-          <li class="form__item form__item-contacts inscription">
+          <li class="form__item form__item-contacts form__item--tel inscription">
             <label class="form__label-text label-text label-text--tel" for="form-tel">Телефон:*</label>
-            <input class="form__input-text input-text input-text--tel" id="form-tel" name="form-tel" type="tel" placeholder="8 (960) 900-60-90" required>
+            <input class="form__input-text input-text input-text--contacts" id="form-tel" name="form-tel" type="tel" placeholder="8 (960) 900-60-90" required>
+            <svg class="icon-phone" width="20" height="20">
+              <use xlink:href="../img/sprite.svg#icon-phone"></use>
+            </svg>
           </li>
         </ul>
       </fieldset>
@@ -118,9 +124,11 @@
           </li>
         </ul>
       </fieldset>
-      <div class="form__fieldset-wrapper2 container">
+      <div class="form-wrapper2 container">
         <button class="form__button button" type="submit">Oтправить заявку</button>
-        <div class="form__advice">* — Обязательные поля</div>
+        <div class="form__advice">
+          <span>* — Обязательные поля</span>
+        </div>
       </div>
     </form>
   </main>

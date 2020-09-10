@@ -1,6 +1,25 @@
 .form__fieldset {
   border: none;
   margin-top: 48px;
+
+
+  &-aim {
+    @media (min-width: @desktop-width) {
+      margin-bottom: 0;
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &-inscription {
+    @media (min-width: @desktop-width) {
+      margin-bottom: 0;
+      margin-top: 0;
+      padding-bottom: 0;
+      margin-right: 62px;
+      padding-left: 0;
+    }
+  }
 }
 
 .form__list {
@@ -15,10 +34,24 @@
   }
 }
 
+.form__list-aim {
+  @media (min-width: @tablet-width) {
+    margin-left: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+}
+
 .form__list-more {
   width: 280px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 
   @media (min-width: @tablet-width) {
     width: 565px;
@@ -35,29 +68,46 @@
   @media (min-width: @tablet-width) {
     border: 1px solid @grey7;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 33px;
+    margin-right: 0;
+  }
 }
 
-.form__fieldset-wrapper1 {
+.form__legend {
+  font-size: 24px;
+  line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 1;
+  }
+}
+
+.form-wrapper1 {
   display: grid;
 
   @media (min-width: @desktop-width) {
-    grid-template-rows: 190px 55px;
     grid-template-columns: 1fr 1fr;
     gap-column: 80px;
   }
 }
 
-.form__fieldset-wrapper2 {
+.form-wrapper2 {
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
 .form__item {
-  margin-top: 14px;
+  margin-top: 25px;
   font-size: 16px;
   line-height: 18px;
   color: @grey4;
@@ -66,6 +116,13 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+  }
+}
+
+.form__item-aim {
+  @media (min-width: @desktop-width) {
+    margin-top: auto;
+    margin-bottom: auto;
   }
 }
 
@@ -85,10 +142,23 @@
   font-family: "Arial", sans-serif;
   font-size: 14px;
   color: @black;
+  margin-top: 21px;
+  text-align: center;
 
   @media (min-width: @tablet-width) {
-    margin-left: 60px;
+    flex-grow: 1.2;
+    margin-top: 0;
+    text-align: left;
+    font-size: 16px;
+
+    & span {
+      margin-left: 40px;
+    }
   }
+}
+
+.form__label-text {
+  margin: auto;
 }
 
 .label-text--tel {
@@ -100,9 +170,24 @@
 .input-text {
   text-transform: uppercase;
   flex-grow: 1;
-  margin-left: 20px;
+  margin-left: 10px;
   border: 1px solid @grey7;
   box-sizing: border-box;
+  padding: 14px;
+
+  &--contacts {
+    border-color: @grey2;
+  }
+
+  &--error {
+    border-color: @status_error;
+
+
+    ~.icon-mail,
+    ~.icon-phone {
+      fill: @status_error;
+    }
+  }
 
   &:hover,
   &:focus {
@@ -111,6 +196,112 @@
 
   &:active {
     border: 2px solid @grey4;
+
+    ~.icon-mail,
+    ~.icon-phone {
+      fill: #68B738;
+    }
+  }
+}
+
+.form__item--mail,
+.form__item--tel  {
+  position: relative;
+}
+
+.icon-mail,
+.icon-phone {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 15px;
+  right: 10px;
+  display: block;
+}
+
+.label-radio,
+.label-check {
+  position: relative;
+  padding-left: 25px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 38px;
+  }
+}
+
+.label-check {
+  margin-left: 20px;
+}
+
+.label-radio::before,
+.label-check::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: -5px;
+  left: -20px;
+  border: 1px solid @grey2;
+  background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.label-radio::before {
+  border-radius: 100%;
+}
+
+.input-radio:checked+.label-radio::after {
+  content: "";
+  position: absolute;
+  width: 13.5px;
+  height: 13.5px;
+  top: 4px;
+  left: -11px;
+  background-color: @green;
+  border-radius: 100%;
+
+  @media (min-width: @tablet-width) {
+    top: 7px;
+    left: -8px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.form__item:hover .label-radio::before,
+.form__item:focus .label-radio::before,
+.form__item-more:hover .label-check::before,
+.form__item-more:focus .label-check::before {
+  border-color: @grey11;
+}
+
+.form__item:active .label-radio::before,
+.form__item-more:active .label-check::before,
+.form__item:active .label-radio::after,
+.form__item-more:active .label-check,
+.form__item:active .label-radio {
+  opacity: 0.3;
+}
+
+.input-check:checked+.label-check::after{
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 2px;
+  left: -14px;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 4px;
+    left: -10px;
+    width: 26px;
+    height: 26px;
   }
 }
 
@@ -120,6 +311,11 @@
 }
 
 .form__button {
+  @media (min-width: @tablet-width) {
+    flex-grow: 1;
+    font-size: 20px;
+  }
+
   @media (min-width: @desktop-width) {
     min-width: 568px;
   }
