@@ -132,19 +132,19 @@
       </div>
     </section>
   </main>
-  <footer class="page-footer">
+  <footer class="page-footer page-footer--form">
     <section class="page-footer__contacts">
       <div class="page-footer__contacts-wrapper container">
         <p class="page-footer__contacts-text">Приглашаем <br>к сотрудничеству <br>дилеров!</p>
         <div class="page-footer__contacts-adress">
           <p class="page-footer__contacts-adress--street">ул. Большая <br>Конюшенная, д. 19/8</p>
           <p class="page-footer__contacts-adress page-footer__contacts-adress--city">Санкт-Петербург</p>
+        </div>
       </div>
-    </div>
       <div class="page-footer__contacts-map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002735!2d30.320858715590237!3d59.938719169054785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1591626314459!5m2!1sru!2sru"
-          width="100%" height="400" allowfullscreen title="Офис компании по адресу Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></iframe>
+          width="320" height="362" allowfullscreen title="Офис компании по адресу Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></iframe>
       </div>
     </section>
     <section class="page-footer__connect">
@@ -157,17 +157,23 @@
           <ul class="page-footer__social-list">
             <li class="page-footer__social-item">
               <a class="page-footer__social-link page-footer__social-link--vk" href="https://vk.com/htmlacademy">
-                <img src="img/icon-vk.svg" width="23" height="16" alt="Мы в Вконтакте">
+                <svg  width="23" height="16" aria-labelledby="Мы в Вконтакте">
+                  <use xlink:href="../img/sprite.svg#icon-vk"></use>
+                </svg>
               </a>
             </li>
             <li class="page-footer__social-item">
               <a class="page-footer__social-link page-footer__social-link--insta" href="https://www.instagram.com/htmlacademy">
-                <img src="img/icon-insta.svg" width="16" height="16" alt="Мы в Инстаграме">
+                <svg  width="16" height="16" aria-labelledby="Мы в Инстаграме">
+                  <use xlink:href="../img/sprite.svg#icon-insta"></use>
+                </svg>
               </a>
             </li>
             <li class="page-footer__social-item">
               <a class="page-footer__social-link page-footer__social-link--fb" href="https://www.facebook.com/htmlacademy">
-                <img src="img/icon-fb.svg" width="22" height="22" alt="Мы в Фейсбуке">
+                <svg  width="22" height="22" aria-labelledby="Мы в Фейсбуке">
+                  <use xlink:href="../img/sprite.svg#icon-fb"></use>
+                </svg>
               </a>
             </li>
           </ul>
@@ -175,7 +181,9 @@
         <div class="page-footer__copyright">
           <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="page-header__logo-text page-footer__logo-text" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
+            <object type="image/svg+xml" data="img/htmlacademy.svg" width="27" height="34">
+              <img class="page-header__logo-text page-footer__logo-text" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
+            </object>
           </a>
         </div>
       </div>
