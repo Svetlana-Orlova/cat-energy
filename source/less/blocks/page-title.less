@@ -94,6 +94,7 @@
 
   @media (min-width: @desktop-width) {
     padding-top: 114px;
+    padding-left: 0;
   }
 }
 
@@ -109,6 +110,16 @@
     padding-left: 65px;
     text-align: left;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+  }
+}
+
+.page-title__wrapper picture {
+  width: 100%;
+  display: block;
+  position: relative;
 }
 
 .page-title__button {
@@ -121,8 +132,13 @@
     border: none;
     font-size: 20px;
     margin: 0;
+    margin-top: 45px;
     margin-left: 65px;
     padding: 14px 26px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 52px;
   }
 }
 
@@ -132,16 +148,20 @@
   @media (min-width: @tablet-width) {
     display: block;
     position: absolute;
-    top: 217px;
-    left: 30%;
+    padding: 0;
+    top: 0;
+    left: 0;
     z-index: -5;
+    width: 709px;
+    height: 609px;
   }
 
   @media (min-width: @desktop-width) {
-    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-71px, -50%);
+    transform: translate(-3%, -50%);
     z-index: 5;
+    width: 552px;
+    height: 499px;
   }
 }

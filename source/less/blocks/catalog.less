@@ -63,10 +63,7 @@
   @media (min-width: @tablet-width) {
     grid-column: 1/2;
     grid-row: 1/2;
-    width: 280px;
-    height: 100px;
     margin: 0 auto;
-    position: relative;
   }
 
   @media (min-width: @desktop-width) {
@@ -80,8 +77,13 @@
     position: absolute;
     display: block;
     height: auto;
-    bottom: 0;
+    bottom: 290px;
     background: transparent;
+    left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: 295px;
   }
 }
 
