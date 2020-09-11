@@ -205,13 +205,16 @@
     }
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     border-color: @grey2;
+    outline: none;
   }
 
-  &:active {
-    border: 2px solid @grey4;
+  &:active,
+  &:focus {
+    border-color: @grey4;
+    box-shadow: inset 0 0 0 1px;
+    outline: none;
 
     ~ .icon-mail,
     ~ .icon-phone {
@@ -289,17 +292,17 @@
 }
 
 .form__item:hover .label-radio::before,
-.form__item:focus .label-radio::before,
-.form__item-more:hover .label-check::before,
-.form__item-more:focus .label-check::before {
+.form__item-more:hover .label-check::before {
   border-color: @grey11;
 }
 
-.form__item:active .label-radio::before,
+.form__item:active .label-radio::before:active,
 .form__item-more:active .label-check::before,
 .form__item:active .label-radio::after,
 .form__item-more:active .label-check,
-.form__item:active .label-radio {
+.form__item:active .label-radio,
+.form__item:focus .label-radio::before,
+.form__item-more:focus .label-check::before {
   opacity: 0.3;
 }
 
@@ -319,6 +322,11 @@
     width: 26px;
     height: 26px;
   }
+}
+
+.input-radio:focus ~ .label-radio,
+.input-check:focus ~ .label-check {
+  opacity: 0.3;
 }
 
 .input-text--textarea {
