@@ -1,6 +1,7 @@
 .form__fieldset {
   border: none;
   margin-top: 48px;
+  position: relative;
 
   &-inscription {
     @media (min-width: @desktop-width) {
@@ -95,6 +96,30 @@
 .form__legend {
   font-size: 24px;
   line-height: 26px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-left: -20px;
+  background-color: @white;
+
+  @media (max-width: @mobile-width-only) {
+    max-width: 225px;
+  }
+
+  &::before {
+    content: "";
+    position:absolute;
+    display: block;
+    height: 2px;
+    background-color: @green;
+    top: 16px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    @media (min-width: @tablet-width) {
+      top: 22px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
@@ -196,7 +221,7 @@
     border-color: @grey2;
   }
 
-  &--error {
+  &:invalid {
     border-color: @status_error;
 
     ~ .icon-mail,
@@ -327,11 +352,19 @@
 .input-radio:focus ~ .label-radio,
 .input-check:focus ~ .label-check {
   opacity: 0.3;
+  position: relative;
 }
 
 .input-text--textarea {
   width: 100%;
   margin-left: 0;
+  font-size: 16px;
+  line-height: 18px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .form__button {
