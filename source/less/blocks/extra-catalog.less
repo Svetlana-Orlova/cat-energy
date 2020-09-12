@@ -52,6 +52,27 @@
 
 .extra-catalog__title {
   font-size: 24px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-left: -20px;
+  background-color: @white;
+  width: max-content;
+
+  &::before {
+    content: "";
+    position:absolute;
+    display: block;
+    height: 2px;
+    background-color: @green;
+    top: 66px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    @media (min-width: @tablet-width) {
+      top: 89px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
@@ -140,6 +161,7 @@
 
 .another-goods {
   display: grid;
+  position: relative;
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 896px 245px;
