@@ -1,7 +1,28 @@
+.form {
+  padding-bottom: 28px;
+}
+
 .form__fieldset {
   border: none;
-  margin-top: 48px;
   position: relative;
+  padding: 0;
+  margin: 0;
+
+  &--contacts {
+    margin-top: 55px;
+    padding-left: 20px;
+  }
+
+  &--comment {
+    padding-left: 20px;
+    padding-right: 19px;
+    margin-top: 25px;
+  }
+
+  &--more {
+    padding-left: 20px;
+    margin-top: 22px;
+  }
 
   &-inscription {
     @media (min-width: @desktop-width) {
@@ -21,12 +42,17 @@
 }
 
 .form__list-contacts {
+  margin-top: 30px;
+  margin-right: 20px;
+
   @media (min-width: @desktop-width) {
     display: flex;
   }
 }
 
 .form__list-aim {
+  margin-left: 20px;
+
   @media (min-width: @tablet-width) {
     margin-left: 20px;
   }
@@ -39,11 +65,12 @@
   }
 }
 
-.form__list-more {
+.form__list--more {
   width: 280px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 3px;
 
   @media (min-width: @tablet-width) {
     width: 565px;
@@ -57,6 +84,7 @@
 .form__fieldset-aim {
   box-sizing: border-box;
   position: relative;
+  margin-top: 26px;
 
   &::after,
   &::before {
@@ -74,11 +102,11 @@
   }
 
   &::after {
-    top: 170px;
+    top: 151px;
   }
 
   &::before {
-    top: 0;
+    top: -5px;
   }
 
   @media (min-width: @tablet-width) {
@@ -149,11 +177,15 @@
 }
 
 .form__item {
-  margin-top: 25px;
+  margin-top: 12px;
   font-size: 16px;
   line-height: 18px;
   color: @grey4;
   text-transform: uppercase;
+
+  &:first-of-type {
+    margin-top: 23px;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -162,14 +194,17 @@
 }
 
 .form__item-aim {
+  margin-top: 23px;
+
   @media (min-width: @desktop-width) {
     margin-top: auto;
     margin-bottom: auto;
   }
 }
 
-.form__item-more {
+.form__item--more {
   width: 280px;
+  padding-top: 13px;
 
   @media (min-width: @tablet-width) {
     width: 221px;
@@ -201,6 +236,7 @@
 
 .form__label-text {
   margin: auto;
+  padding-right: 5px;
 }
 
 .label-text--tel {
@@ -253,13 +289,18 @@
   position: relative;
 }
 
+.label-text--mail,
+.label-text--tel {
+  padding-right: 1px;
+}
+
 .icon-mail,
 .icon-phone {
   position: absolute;
   width: 20px;
   height: 20px;
   top: 15px;
-  right: 10px;
+  right: 14px;
   display: block;
 }
 
@@ -317,17 +358,17 @@
 }
 
 .form__item:hover .label-radio::before,
-.form__item-more:hover .label-check::before {
+.form__item--more:hover .label-check::before {
   border-color: @grey11;
 }
 
 .form__item:active .label-radio::before:active,
-.form__item-more:active .label-check::before,
+.form__item--more:active .label-check::before,
 .form__item:active .label-radio::after,
-.form__item-more:active .label-check,
+.form__item--more:active .label-check,
 .form__item:active .label-radio,
 .form__item:focus .label-radio::before,
-.form__item-more:focus .label-check::before {
+.form__item--more:focus .label-check::before {
   opacity: 0.3;
 }
 
@@ -360,6 +401,8 @@
   margin-left: 0;
   font-size: 16px;
   line-height: 18px;
+  margin-top: 33px;
+  margin-right: 20px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -368,6 +411,9 @@
 }
 
 .form__button {
+  padding: 13px 15px 9px;
+  margin-top: 8px;
+
   @media (min-width: @tablet-width) {
     flex-grow: 1;
     font-size: 20px;
