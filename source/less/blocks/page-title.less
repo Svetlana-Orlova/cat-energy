@@ -85,10 +85,6 @@
   text-align: center;
   margin: 0;
 
-  &--form {
-    text-align: left;
-  }
-
   @media (min-width: @tablet-width) {
     font-weight: normal;
     font-size: 60px;
@@ -101,6 +97,15 @@
     padding-top: 114px;
     padding-left: 0;
   }
+
+  &--form {
+    text-align: left;
+
+    @media (min-width: @tablet-width) {
+      padding-left: 0;
+      margin-top: 2px;
+    }
+  }
 }
 
 .page-title__description {
@@ -108,12 +113,6 @@
   margin-top: 21px;
   text-transform: uppercase;
   text-align: center;
-
-  &--form {
-    line-height: 18px;
-    text-align: left;
-    margin-top: 37px;
-  }
 
   @media (min-width: @tablet-width) {
     font-weight: normal;
@@ -125,6 +124,18 @@
 
   @media (min-width: @desktop-width) {
     padding-left: 0;
+  }
+
+  &--form {
+    line-height: 18px;
+    text-align: left;
+    margin-top: 37px;
+
+    @media (min-width: @tablet-width) {
+      padding-left: 40px;
+      margin-top: 55px;
+      line-height: 30px;
+    }
   }
 }
 
