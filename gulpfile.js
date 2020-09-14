@@ -141,6 +141,7 @@ exports.refresh = refresh;
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles));
   gulp.watch("source/*.html", gulp.series(html, refresh));
+  gulp.watch("source/img/**/*.{jpg,png}", gulp.series(clean, copy, refresh));
 };
 
 exports.default = gulp.series(build, server, watcher);

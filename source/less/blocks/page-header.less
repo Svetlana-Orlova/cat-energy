@@ -5,7 +5,11 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-top: 15px;
+  margin-top: 11px;
+
+  &--form {
+    margin-top: 3px;
+  }
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
@@ -16,7 +20,7 @@
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    top: 70px;
+    top: 53px;
     left: 0;
     right: 0;
     margin: auto;
@@ -27,15 +31,15 @@
 
 .page-header__logo {
   height: 37px;
-  margin: 0 auto;
-  padding-right: 65px;
-  padding-bottom: 15px;
+  padding-right: 0;
   display: block;
+  margin-right: 91px;
 
   @media (min-width: @tablet-width) {
-    width: 174px;
+    width: 176px;
     height: 52px;
-    margin-left: 0;
+    margin-left: -1px;
+    margin-right: 20px;
   }
 
   @media (min-width: @desktop-width) {
@@ -76,8 +80,8 @@
   border: none;
   background-color: transparent;
   background-repeat: no-repeat;
-  top: 18px;
-  right: 20px;
+  top: 12px;
+  right: 22px;
   cursor: pointer;
   z-index: 3;
 
@@ -99,7 +103,7 @@
 }
 
 .main-nav__wrapper {
-  margin-top: 10px;
+  margin-top: 17px;
 
   @media (min-width: @tablet-width) {
     margin-top: 0;
@@ -121,7 +125,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    min-width: 520px;
+    min-width: 479px;
   }
 }
 
@@ -155,7 +159,7 @@
     background-color: @grey8;
     left: -20px;
     right: -20px;
-    top: 5px;
+    top: 0;
 
     @media (min-width: @tablet-width) {
       display: none;
@@ -188,8 +192,12 @@
   }
 }
 
+.main-nav__item {
+  padding-bottom: 10px;
+}
+
 .main-nav__item:last-of-type .main-nav__link {
-  padding-bottom: 7px;
+  padding-bottom: 3px;
 }
 
 .main-nav__item--active {
