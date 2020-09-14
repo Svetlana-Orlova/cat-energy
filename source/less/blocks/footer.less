@@ -16,22 +16,25 @@
   }
 }
 
-.page-footer__contacts--catalog {
-  background-color: @basic-grey;
-}
-
 .page-footer__contacts {
+  background-color: @white;
+
   @media (min-width: @desktop-width) {
     position: relative;
   }
+}
+
+.page-footer__contacts--catalog,
+.page-footer__contacts--form {
+  background-color: @basic-grey;
 }
 
 .page-footer__contacts-wrapper {
   display: flex;
   flex-basis: 320px;
   justify-content: space-between;
-  padding-bottom: 22px;
-  padding-top: 30px;
+  padding-bottom: 25px;
+  padding-top: 32px;
 
   @media (min-width: @tablet-width) {
     flex-basis: @tablet-width;
@@ -53,16 +56,17 @@
   }
 }
 
-.page-footer__contacts-wrapper--catalog {
+.page-footer__contacts-wrapper--catalog,
+.page-footer__contacts-wrapper--form {
   background-color: @basic-grey;
 
   @media (min-width: @tablet-width) {
     padding-top: 65px;
-    background-color: @white;
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 0;
+    background-color: @white;
   }
 }
 
@@ -107,7 +111,7 @@
 
   @media (min-width: @desktop-width) {
     margin-top: 62px;
-    margin-right: 7px;
+    margin-right: 0;
     padding-right: 89px;
     text-align: left;
     margin-left: 9px;
@@ -169,11 +173,15 @@
   border: none;
   display: block;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    height: 400px;
+  }
 }
 
 .page-footer__connect {
   background-color: @basic-grey;
-  margin-top: 12px;
+  margin-top: 10px;
 
   @media (min-width: @tablet-width) {
     margin: 0;
@@ -201,6 +209,7 @@
 
 .page-footer__logo {
   padding-top: 25px;
+  width: 128px;
 
   &:hover,
   &:focus {

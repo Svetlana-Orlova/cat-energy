@@ -32,7 +32,7 @@
     height: 1px;
     left: -30px;
     right: -30px;
-    top: 0;
+    top: -2px;
     background-color: @grey1;
 
     @media (min-width: @tablet-width) {
@@ -57,7 +57,7 @@
   }
 }
 
-.catalog__link {
+.catalog__link--product {
   min-width: 100px;
   height: auto;
   grid-row-start: 1;
@@ -77,14 +77,12 @@
   }
 }
 
-.catalog__item:first-of-type .catalog__link {
+.catalog__item:first-of-type .catalog__link--product {
   margin-top: -19px;
 }
 
-.catalog__item:nth-of-type(2n-1):not(:first-of-type) .catalog__link {
-  margin-top: -3px;
-  margin-left: 4px;
-  margin-right: 4px;
+.catalog__item:nth-of-type(2n-1):not(:first-of-type) .catalog__link--product {
+  margin-top: -10px;
 
   @media (min-width: @tablet-width) {
     margin: 0;
@@ -121,29 +119,40 @@
   }
 }
 
-.catalog__product {
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 20px;
-  text-transform: uppercase;
+.catalog__link--title {
   margin: 0;
   max-width: 76px;
   margin-left: 0;
 
   @media (min-width: @tablet-width) {
     grid-row-start: 2/3;
-    font-size: 20px;
-    text-align: center;
-    max-width: 159px;
-    line-height: 24px;
     margin: 0 auto;
+    max-width: 159px;
     margin-top: 39px;
   }
 
   @media (min-width: @desktop-width) {
-    line-height: 21px;
     padding-bottom: 0;
-    margin-top: 43px;
+    margin-top: 44px;
+  }
+}
+
+.catalog__product {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin: 0;
+  margin-left: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    text-align: center;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    line-height: 21px;
   }
 }
 
@@ -158,10 +167,12 @@
   @media (min-width: @tablet-width) {
     font-size: 16px;
     margin: 0 36px;
-    margin-top: 49px;
+    margin-top: 50px;
   }
 
   @media (min-width: @desktop-width) {
+    margin-right: 39px;
+    margin-left: 36px;
     margin-top: 52px;
   }
 }
@@ -240,7 +251,7 @@
     height: 1px;
     left: -20px;
     right: -20px;
-    top: 209px;
+    top: 207px;
     background-color: @grey1;
 
     @media (min-width: @tablet-width) {
@@ -249,7 +260,7 @@
   }
 
   &::before {
-    top: 0;
+    top: -2px;
   }
 
   @media (min-width: @tablet-width) {
@@ -282,6 +293,8 @@
 
   @media (min-width: @desktop-width) {
     margin-top: 30px;
+    margin-left: 40px;
+    margin-right: 42px;
   }
 }
 
