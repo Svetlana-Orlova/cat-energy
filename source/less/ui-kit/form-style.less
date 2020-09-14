@@ -6,6 +6,10 @@
     margin-right: 40px;
     padding-bottom: 72px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 82px;
+  }
 }
 
 .form__fieldset {
@@ -22,6 +26,11 @@
       margin-top: 76px;
       padding-left: 28px;
     }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 69px;
+      padding-left: 70px;
+    }
   }
 
   &--comment {
@@ -33,6 +42,11 @@
       padding-left: 28px;
       margin-top: 65px;
     }
+
+    @media (min-width: @desktop-width) {
+      padding-left: 70px;
+      margin-top: 66px;
+    }
   }
 
   &--more {
@@ -43,6 +57,11 @@
       margin-top: 66px;
       padding-left: 30px;
     }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 68px;
+      padding-left: 69px;
+    }
   }
 
   &--inscription {
@@ -52,9 +71,9 @@
 
     @media (min-width: @desktop-width) {
       margin-bottom: 0;
-      margin-top: 0;
+      margin-top: 19px;
       padding-bottom: 0;
-      margin-right: 62px;
+      margin-right: 19px;
       padding-left: 0;
     }
   }
@@ -93,6 +112,7 @@
     flex-direction: column;
     justify-content: center;
     height: 100%;
+    margin-top: 1px;
   }
 }
 
@@ -109,7 +129,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 1220px;
+    width: 1198px;
   }
 }
 
@@ -150,8 +170,9 @@
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
     padding-bottom: 0;
-    margin-top: 33px;
+    margin-top: 20px;
     margin-right: 0;
+    margin-left: 60px;
   }
 }
 
@@ -201,7 +222,8 @@
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 1fr;
-    gap-column: 80px;
+    margin-top: 46px;
+    padding-left: 70px;
   }
 }
 
@@ -215,6 +237,12 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 64px;
+    margin-left: 71px;
+    padding-left: 0;
   }
 }
 
@@ -231,6 +259,10 @@
     @media (min-width: @tablet-width) {
       margin-top: 18px;
     }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 0;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -244,9 +276,7 @@
   margin-top: 23px;
 
   @media (min-width: @desktop-width) {
-    margin-top: auto;
-    margin-bottom: auto;
-    padding-top: 1px;
+    margin-top: 21px;
   }
 }
 
@@ -258,9 +288,11 @@
     width: 221px;
     padding-top: 25px;
   }
+}
 
+.form__item--more:first-of-type {
   @media (min-width: @desktop-width) {
-    flex-grow: 1;
+    margin-top: 19px;
   }
 }
 
@@ -281,6 +313,10 @@
       margin-left: 40px;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 19px;
+  }
 }
 
 .form__label-text {
@@ -294,7 +330,7 @@
 
 .label-text--tel {
   @media (min-width: @desktop-width) {
-    margin-left: 60px;
+    margin-left: 76px;
   }
 }
 
@@ -340,6 +376,24 @@
 .form__item--mail,
 .form__item--tel {
   position: relative;
+
+  @media (min-width: @desktop-width) {
+    padding-right: 24px;
+  }
+}
+
+
+.form__item--tel {
+  margin-top: 12px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 1px;
+    margin-right: 19px;
+  }
 }
 
 .label-text--mail,
@@ -347,7 +401,17 @@
   padding-right: 1px;
 
   @media (min-width: @tablet-width) {
+    padding-right: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
     padding-right: 8px;
+  }
+}
+
+.label-text--mail {
+  @media (min-width: @desktop-width) {
+    margin-top: 12px;
   }
 }
 
@@ -365,6 +429,11 @@
   @media (min-width: @tablet-width) {
     padding-left: 21px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 13px;
+    padding-right: 28px;
+  }
 }
 
 .icon-mail,
@@ -379,6 +448,16 @@
   @media (min-width: @tablet-width) {
     top: 18px;
     right: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 21px;
+  }
+}
+
+.icon-phone {
+  @media (min-width: @desktop-width) {
+    right: 42px;
   }
 }
 
@@ -489,6 +568,10 @@
     margin-top: 76px;
     padding: 11px 0 11px 20px;
     rows: 5;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 18px;
   }
 }
 
