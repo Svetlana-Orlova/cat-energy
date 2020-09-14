@@ -49,8 +49,20 @@
     top: 95px;
     z-index: 3;
     min-height: 201px;
-    text-align: center;
     padding: 0;
+  }
+}
+
+.page-footer__contacts-wrapper--catalog {
+  background-color: @basic-grey;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 65px;
+    background-color: @white;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
   }
 }
 
@@ -74,6 +86,7 @@
     margin-top: 66px;
     padding-left: 76px;
     margin-right: 87px;
+    margin-left: 0;
   }
 }
 
@@ -94,7 +107,10 @@
 
   @media (min-width: @desktop-width) {
     margin-top: 62px;
+    margin-right: 7px;
     padding-right: 89px;
+    text-align: left;
+    margin-left: 9px;
   }
 }
 
@@ -161,6 +177,10 @@
 
   @media (min-width: @tablet-width) {
     margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 4px;
   }
 }
 

@@ -7,13 +7,14 @@
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 83px 60px;
     margin-top: 91px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 63px 80px;
+    gap: 90px 80px;
+    margin-top: 96px;
   }
 }
 
@@ -50,7 +51,8 @@
 
   @media (min-width: @desktop-width) {
     width: 245px;
-    grid-template-columns: 245px;
+    margin-top: 55px;
+    grid-template-columns: 249px;
     grid-template-rows: 50px 50px 50px;
   }
 }
@@ -78,6 +80,7 @@
 .catalog__item:first-of-type .catalog__link {
   margin-top: -19px;
 }
+
 .catalog__item:nth-of-type(2n-1):not(:first-of-type) .catalog__link {
   margin-top: -3px;
   margin-left: 4px;
@@ -93,19 +96,29 @@
     position: absolute;
     display: block;
     height: auto;
-    bottom: 250px;
+    bottom: 300px;
     background: transparent;
     left: 0;
   }
 
   @media (min-width: @desktop-width) {
-    bottom: 295px;
+    bottom: 302px;
   }
 }
 
 .catalog__link picture {
   display: block;
   height: 100%;
+}
+
+.catalog__item:nth-child(2n-1) .catalog__link img {
+  @media (min-width: @tablet-width) {
+    bottom: 304px;
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: 310px;
+  }
 }
 
 .catalog__product {
@@ -124,12 +137,13 @@
     max-width: 159px;
     line-height: 24px;
     margin: 0 auto;
-    margin-top: 40px;
+    margin-top: 39px;
   }
 
   @media (min-width: @desktop-width) {
     line-height: 21px;
     padding-bottom: 0;
+    margin-top: 43px;
   }
 }
 
@@ -148,7 +162,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 0;
+    margin-top: 52px;
   }
 }
 
@@ -167,6 +181,10 @@
     padding: 8px 0;
     border-bottom: 1px solid @grey2;
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 8px 4px;
+  }
 }
 
 .catalog__title {
@@ -181,7 +199,7 @@
   margin-top: 58px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 170px;
+    margin-top: 140px;
     font-size: 20px;
     line-height: 22px;
     max-width: 145px;
@@ -210,19 +228,19 @@
   background-image: url("../img/icon-plus-mobile.svg");
   background-repeat: no-repeat;
   background-size: 30px;
-  background-position: center 26px;
+  background-position: center 25px;
   position: relative;
   margin-left: 0;
   margin-right: 0;
 
-  &::after,
-  &::before {
+  &::before,
+  &::after {
     content: "";
     position: absolute;
     height: 1px;
     left: -20px;
     right: -20px;
-    top: 260px;
+    top: 209px;
     background-color: @grey1;
 
     @media (min-width: @tablet-width) {
@@ -256,14 +274,14 @@
     grid-column-start: 1;
     grid-column-end: 2;
     display: table;
-    margin-top: 20px;
-    margin-right: 40px;
-    margin-left: 40px;
+    margin-top: 31px;
+    margin-right: 38px;
+    margin-left: 38px;
     margin-bottom: 40px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 0;
+    margin-top: 30px;
   }
 }
 
@@ -284,6 +302,6 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin: 40px 40px 0;
+    margin: 86px 40px 0;
   }
 }
