@@ -1,6 +1,10 @@
 .extra-catalog {
   padding-top: 4px;
 
+  @media (min-width: @tablet-width) {
+    padding-top: 6px;
+  }
+
   @media (min-width: @desktop-width) {
     padding-top: 12px;
   }
@@ -218,7 +222,7 @@
   }
 }
 
-.promotion__wrapper {
+.promotion {
   color: @white;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-size: contain;
@@ -264,7 +268,7 @@
   }
 }
 
-.promotion__img {
+.promotion-img {
   fill: @white;
   margin-left: 110px;
   margin-top: 61px;
@@ -284,7 +288,7 @@
   }
 }
 
-.promotion__description {
+.promotion-description {
   margin: 53px auto 0;
   text-align: center;
   min-width: 160px;
