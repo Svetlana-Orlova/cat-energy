@@ -144,15 +144,19 @@
   text-transform: uppercase;
   margin: 0;
   margin-left: 0;
+  overflow: hidden;
+  max-height: 40px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     text-align: center;
     line-height: 24px;
+    max-height: 48px;
   }
 
   @media (min-width: @desktop-width) {
     line-height: 21px;
+    max-height: 42px;
   }
 }
 

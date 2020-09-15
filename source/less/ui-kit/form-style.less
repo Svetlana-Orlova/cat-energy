@@ -1,5 +1,5 @@
 .form {
-  padding-bottom: 25px;
+  padding-bottom: 28px;
 
   @media (min-width: @tablet-width) {
     margin-left: 40px;
@@ -17,6 +17,11 @@
   position: relative;
   padding: 0;
   margin: 0;
+
+  @media (min-width: @desktop-width) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   &--contacts {
     margin-top: 55px;
@@ -76,6 +81,7 @@
       padding-bottom: 0;
       margin-right: 19px;
       padding-left: 0;
+      margin-left: 0;
     }
   }
 }
@@ -97,6 +103,8 @@
 
   @media (min-width: @desktop-width) {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
@@ -172,7 +180,7 @@
     margin-bottom: 0;
     padding-bottom: 0;
     margin-top: 20px;
-    margin-right: 0;
+    margin-right: -40px;
     margin-left: 60px;
   }
 }
@@ -248,9 +256,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 64px;
-    margin-left: 71px;
-    padding-left: 0;
+    margin-top: 65px;
+    padding-left: 71px;
   }
 }
 
@@ -381,7 +388,8 @@
   position: relative;
 
   @media (min-width: @desktop-width) {
-    padding-right: 47px;
+    padding-right: 34px;
+    margin-right: 43px;
   }
 }
 
@@ -395,6 +403,7 @@
 
   @media (min-width: @desktop-width) {
     margin-top: 1px;
+    margin-right: 7px;
   }
 }
 
@@ -415,11 +424,6 @@
   @media (min-width: @tablet-width) {
     padding-right: 7px;
   }
-
-  @media (min-width: @desktop-width) {
-    margin-left: 25px;
-    padding-right: 9px;
-  }
 }
 
 .label-text--mail {
@@ -433,7 +437,7 @@
   padding-left: 14px;
 
   @media (min-width: @tablet-width) {
-    padding-left: 17px;
+    padding-left: 15px;
   }
 }
 
@@ -446,7 +450,6 @@
 
   @media (min-width: @desktop-width) {
     padding-bottom: 13px;
-    padding-right: 32px;
   }
 }
 
@@ -465,14 +468,14 @@
   }
 
   @media (min-width: @desktop-width) {
-    right: 67px;
+    right: 50px;
     top: 17px;
   }
 }
 
 .icon-phone {
   @media (min-width: @desktop-width) {
-    right: 61px;
+    right: 54px;
   }
 }
 
